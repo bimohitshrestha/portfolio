@@ -1,12 +1,5 @@
 import Head from "next/head";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaGitAlt,
-  FaMobileAlt,
-} from "react-icons/fa";
+import { FaJs, FaReact, FaGitAlt, FaMobileAlt } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs, SiTypescript } from "react-icons/si";
 
 const Skills: React.FC = () => {

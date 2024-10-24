@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const WorkPage = () => {
@@ -5,8 +6,7 @@ const WorkPage = () => {
     {
       id: 1,
       title: "E-commerce Platform",
-      image:
-        "https://www.vocso.com/blog/wp-content/uploads/2022/02/eCommerce-Website-Features-1920-x-1080.jpg",
+      image: "/Assets/ecommerce.jpg",
       description:
         "A full-stack e-commerce solution built with React.js and Node.js",
       technologies: [
@@ -22,8 +22,7 @@ const WorkPage = () => {
     {
       id: 2,
       title: "Twitter Clone",
-      image:
-        "https://miro.medium.com/v2/resize:fit:1400/1*a-PfepJxHGMWl6YFyIaq8A.jpeg",
+      image: "/Assets/twitter.jpg",
       description: " Lorem ipsum dolor sit, amet consectetur adipisicing elit",
       technologies: ["React", "Material Ui", "TailwindCss"],
       link: "https://github.com/bimohitshrestha/Twitter-clone",
@@ -46,11 +45,14 @@ const WorkPage = () => {
               key={project.id}
               className="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:scale-105"
             >
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={300}
+                height={300}
                 className="w-full h-48 object-cover"
               />
+
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-gray-800">
                   {project.title}

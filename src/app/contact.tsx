@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
-import { Snackbar, Alert } from "@mui/material";
+import { Snackbar, Alert, SnackbarCloseReason } from "@mui/material";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -12,20 +12,24 @@ const ContactForm = () => {
 
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     setOpenSnackbar(true);
   };
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
-
-  const handleCloseSnackbar = (event: any, reason: any) => {
+  const handleCloseSnackbar = (
+    event: React.SyntheticEvent | Event, // Accept both types of events
+    reason: SnackbarCloseReason // Use SnackbarCloseReason for reason
+  ) => {
     if (reason === "clickaway") {
       return;
     }

@@ -1,36 +1,15 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 
 const HeroSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [typedText, setTypedText] = useState("");
-  const fullText = "I’m a frontend developer"; // Ensured space in "I'm"
-
-  useEffect(() => {
-    setIsVisible(true);
-
-    let currentIndex = 0;
-    const typingInterval = setInterval(() => {
-      if (currentIndex < fullText.length) {
-        setTypedText((prev) => prev + fullText.charAt(currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(typingInterval);
-      }
-    }, 100); // Adjust typing speed here
-
-    return () => clearInterval(typingInterval);
-  }, []);
+  const fullText = "I’m a frontend developer";
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
-        <div
-          className={`grid lg:grid-cols-2 gap-12 items-center ${
-            isVisible ? "animate-fade-in" : "opacity-0"
-          }`}
-        >
+        <div className="grid lg:grid-cols-2 gap-12 items-center animate-fade-in">
           <div className="space-y-8">
             <div className="space-y-4">
               <span className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
@@ -38,12 +17,12 @@ const HeroSection = () => {
               </span>
 
               <h1 className="text-xl lg:text-4xl font-bold text-slate-900 dark:text-white">
-                Hi, I'm Bimohit Shrestha
+                Hi, I&apos;m Bimohit Shrestha
               </h1>
 
               <div className="h-8">
                 <p className="text-xl lg:text-2xl text-slate-600 dark:text-slate-300">
-                  {typedText}
+                  {fullText}
                 </p>
               </div>
 
@@ -75,9 +54,11 @@ const HeroSection = () => {
           <div className="relative group">
             <div className="absolute inset-0 bg-blue-600/20 rounded-3xl blur-2xl group-hover:bg-blue-600/30 transition-colors duration-300" />
             <div className="relative">
-              <img
+              <Image
                 src="/Assets/portfolio.png"
                 alt="Bimohit Shrestha"
+                width={400}
+                height={300}
                 className="rounded-3xl shadow-2xl w-full max-w-md mx-auto transform transition-transform duration-300 group-hover:scale-[1.02]"
               />
             </div>
