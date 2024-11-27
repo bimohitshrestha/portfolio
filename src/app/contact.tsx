@@ -136,7 +136,7 @@ const ContactForm = () => {
                 name="message"
                 placeholder="What would you like to discuss?"
                 rows={6}
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all resize-none"
+                className="w-full text-black px-4 py-3 rounded-lg border text border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all resize-none"
                 value={formData.message}
                 onChange={handleChange}
                 required
