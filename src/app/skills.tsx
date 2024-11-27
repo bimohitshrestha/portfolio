@@ -60,7 +60,7 @@ const Skills: React.FC = () => {
             >
               <div className="text-4xl mr-4">{skill.icon}</div>
               <div>
-                <h2 className="text-xl font-medium">{skill.name}</h2>
+                <h2 className="text-xl font-medium text-black">{skill.name}</h2>
                 {/* <p className="text-gray-500">{skill.level}</p> */}
               </div>
             </div>

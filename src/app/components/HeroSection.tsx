@@ -7,26 +7,26 @@ const HeroSection = () => {
   const fullText = "I’m a frontend developer";
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 rounded-lg">
+    <section className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-50 dark:to-slate-100 rounded-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center animate-fade-in">
           <div className="space-y-8">
             <div className="space-y-4">
-              <span className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
+              <span className="inline-block px-4 py-2 bg-blue-100 text-blue-700 dark:text-blue-700 rounded-full text-sm font-medium">
                 Welcome to my portfolio
               </span>
 
-              <h1 className="text-xl lg:text-4xl font-bold text-slate-900 dark:text-white">
+              <h1 className="text-xl lg:text-4xl font-bold text-slate-900 dark:text-slate-900">
                 Hi, I&apos;m Bimohit Shrestha
               </h1>
 
               <div className="h-8">
-                <p className="text-xl lg:text-2xl text-slate-600 dark:text-slate-300">
+                <p className="text-xl lg:text-2xl text-slate-600 dark:text-slate-600">
                   {fullText}
                 </p>
               </div>
 
-              <p className="text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl">
+              <p className="text-slate-600 dark:text-slate-600 leading-relaxed max-w-xl">
                 Passionate about creating engaging and user-friendly web
                 applications with modern technologies and a focus on
                 performance.
@@ -44,7 +44,7 @@ const HeroSection = () => {
 
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center px-6 py-3 border-2 border-slate-300 dark:border-slate-600 hover:border-blue-600 hover:bg-blue-600 hover:text-white dark:hover:border-blue-500 text-slate-700 dark:text-slate-300 rounded-lg transition-colors duration-300"
+                className="inline-flex items-center justify-center px-6 py-3 border-2 border-slate-300 dark:border-slate-300 hover:border-blue-600 hover:bg-blue-600 hover:text-white dark:hover:border-blue-600 text-slate-700 dark:text-slate-500 rounded-lg transition-colors duration-300"
               >
                 Get in Touch
               </a>
