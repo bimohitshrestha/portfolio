@@ -98,7 +98,7 @@ const ContactForm = () => {
                 type="text"
                 name="name"
                 placeholder="Enter your name"
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
+                className="w-full px-4 py-3 rounded-lg border text-black border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -117,7 +117,7 @@ const ContactForm = () => {
                 type="email"
                 name="email"
                 placeholder="Enter your email"
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
+                className="w-full px-4 py-3 rounded-lg border text-black border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
                 value={formData.email}
                 onChange={handleChange}
                 required
